@@ -17,9 +17,6 @@ export interface CarouselProps extends Omit<Settings, 'dots' | 'dotsClass'> {
     waitForAnimate?: boolean;
 }
 */
-const dat: React.CSSProperties = {
-  border: "1px solid black",
-};
 
 export const Carousel = (props: CarouselProps) => {
   return (
@@ -31,12 +28,7 @@ export const Carousel = (props: CarouselProps) => {
         slidesToShow={1}
         slidesToScroll={1}
         {...props}
-        style={{
-          border: "1px solid black",
-        }}
-      >
-        {props.children}
-      </AntCarousel>
+      ></AntCarousel>
     </>
   );
 };
