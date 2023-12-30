@@ -46,6 +46,8 @@
 }
 
 .logo {
-  font-size: 30px;
-  color: #1677ff;
+  height: 70px;
+  width: 160px;
+  /* font-size: 30px; */
+  /* color: #1677ff; */
 }
