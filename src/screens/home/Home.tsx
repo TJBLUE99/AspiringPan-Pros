@@ -4,11 +4,30 @@ import Carousel from "../../components/Carousel";
 import FeatureCard from "../../components/FeatureCard";
 import Image from "../../components/Image";
 import vite from "/vite.svg?url";
+import { SketchOutlined } from "@ant-design/icons";
+import MenuItemProp from "../../models/MenuItemProp";
 
 const HomePage = () => {
+  const menuItems: Array<MenuItemProp> = [
+    {
+      title: "Home",
+      path: "/home",
+    },
+    {
+      title: "Mentors",
+      path: "/mentors",
+    },
+    {
+      title: "About Us",
+      path: "/about-us",
+    },
+  ];
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar
+        logo={<SketchOutlined className="logo" />}
+        menuItems={menuItems}
+      ></Navbar>
       <Carousel>
         <Image
           height={"90vh"}

@@ -1,26 +1,29 @@
 import React from "react";
+
+import "./Navbar.css";
 import { Col, Row } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
+import NavbarProp from "../models/NavbarProp";
 
-const style: React.CSSProperties = {
-  margin: 0,
-};
+const Navbar = (props: NavbarProp) => {
+  const handleClick = (path: string) => {
+    //method to navigate to path specified
+    console.log(path);
+  };
 
-const Navbar = () => {
   return (
     <Row
       style={{
         margin: 0,
-        // padding: "20px",
         height: "10vh",
         position: "sticky",
-        borderBottom: "1px solid grey",
+        boxShadow: " 0 4px 8px 0 rgba(0,0,0,0.2)",
+        transition: "0.3s",
       }}
       justify={"center"}
       align={"middle"}
-
-      // gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
     >
-      <Col style={style} className="gutter-row" xs={18} md={6}>
+      <Col className="gutter-row no-margin" xs={12} md={6}>
         <div
           style={{
             textAlign: "center",
@@ -28,14 +31,33 @@ const Navbar = () => {
             alignItems: "center",
           }}
         >
-          Logo
+          {props.logo}
         </div>
       </Col>
-      <Col style={style} className="gutter-row" xs={6} md={0}>
-        <div style={{ textAlign: "right" }}>Burger</div>
+      <Col className="gutter-row no-margin" xs={6} md={0}>
+        <div style={{ textAlign: "right" }}>
+          <MenuOutlined />
+        </div>
       </Col>
-      <Col style={style} className="gutter-row" xs={0} md={18}>
-        <div style={{ textAlign: "center" }}>Menu</div>
+      <Col className="gutter-row no-margin" xs={0} md={18}>
+        <div
+          style={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            gap: "1rem",
+          }}
+        >
+          {props.menuItems.map((item, i) => (
+            <li
+              className="NavLi"
+              key={i}
+              onClick={() => handleClick(item.path)}
+            >
+              {item.title}
+            </li>
+          ))}
+        </div>
       </Col>
     </Row>
   );
