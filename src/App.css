@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 } */
+
+.no-margin {
+  margin: 0;
+}
+
+.logo {
+  font-size: 30px;
+  color: #1677ff;
+}

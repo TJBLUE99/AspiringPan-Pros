@@ -1,12 +1,8 @@
 import { Card, Typography } from "antd";
 import React from "react";
+import StatCardProp from "../models/StatCardProp";
 
-type Stat = {
-  val: String;
-  desc: String;
-};
-
-export const StatCard = (props: Stat) => {
+export const StatCard = (props: StatCardProp) => {
   return (
     <Card
       style={{

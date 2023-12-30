@@ -1,13 +1,10 @@
 import { Card, Typography } from "antd";
 import React from "react";
 import { Image } from "./Image";
+import FeatureCardProp from "../models/FeatureCardProp";
 
-type FeatureProps = {
-  src: String;
-  caption: String;
-};
 //tilde
-export const FeatureCard = (props: FeatureProps) => {
+export const FeatureCard = (props: FeatureCardProp) => {
   return (
     <Card
       hoverable
