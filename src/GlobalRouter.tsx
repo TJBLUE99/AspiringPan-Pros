@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import React from "react";
-import { HomePage } from "./screens/home/Home";
+import HomePage from "./screens/home/Home";
 // import HomePage from "./pages/home-page/home"
 
-export const GlobalRouter = () => {
+const GlobalRouter = () => {
   return (
     <>
       <Routes>
@@ -12,3 +12,5 @@ export const GlobalRouter = () => {
     </>
   );
 };
+
+export default GlobalRouter;

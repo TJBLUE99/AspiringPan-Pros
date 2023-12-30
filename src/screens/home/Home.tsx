@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import { Carousel } from "../../components/Carousel";
-import { FeatureCard } from "../../components/FeatureCard";
-import { Image } from "../../components/Image";
+import Carousel from "../../components/Carousel";
+import FeatureCard from "../../components/FeatureCard";
+import Image from "../../components/Image";
 import vite from "/vite.svg?url";
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <>
       <Navbar></Navbar>
@@ -36,3 +36,5 @@ export const HomePage = () => {
     </>
   );
 };
+
+export default HomePage;

@@ -18,7 +18,7 @@ export interface CarouselProps extends Omit<Settings, 'dots' | 'dotsClass'> {
 }
 */
 
-export const Carousel = (props: CarouselProps) => {
+const Carousel = (props: CarouselProps) => {
   return (
     <>
       <AntCarousel
@@ -32,3 +32,5 @@ export const Carousel = (props: CarouselProps) => {
     </>
   );
 };
+
+export default Carousel;

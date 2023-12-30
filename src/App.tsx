@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Button from "./components/Button";
-import { FeatureCard } from "./components/FeatureCard";
+import FeatureCard from "./components/FeatureCard";
 import Navbar from "./components/Navbar";
 import { StatCard } from "./components/StatCard";
 import vite from "/vite.svg?url";
-import { GlobalRouter } from "./GlobalRouter";
+import GlobalRouter from "./GlobalRouter";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Divider, Row } from "antd";
+import { Col, Row } from "antd";
 
 const style: React.CSSProperties = {
   margin: 0,
