@@ -11,9 +11,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <GlobalRouter />
-        </Routes>
+        <GlobalRouter />
       </BrowserRouter>
 
       {/* <Navbar />
