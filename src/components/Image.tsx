@@ -23,6 +23,8 @@ import { Image as AntImage, ImageProps } from "antd";
 //   onError?: (e: React.SyntheticEvent<HTMLImageElement, Event>) => void;
 // }
 
-export const Image = (props: ImageProps) => {
+const Image = (props: ImageProps) => {
   return <AntImage preview={false} {...props} />;
 };
+
+export default Image;
