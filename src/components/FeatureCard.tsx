@@ -3,7 +3,7 @@ import React from "react";
 import { Image } from "./Image";
 
 type FeatureProps = {
-  src: String;
+  src: string;
   caption: String;
 };
 //tilde
