@@ -19,16 +19,17 @@ const Hero = () => {
     setCurrentSlide(current);
   };
   return (
-    <Carousel afterChange={handleSlideChange}>
-      {imgUrls.map((imgUrl, index) => (
-        <div
-          key={index}
-          className={`carousel-item ${currentSlide === index ? "active" : ""}`}
-        >
-          <Image src={imgUrl} alt={`Image ${index + 1}`} />
-        </div>
-      ))}
-    </Carousel>
+    // <Carousel afterChange={handleSlideChange}>
+    //   {imgUrls.map((imgUrl, index) => (
+    //     <div
+    //       key={index}
+    //       className={`carousel-item ${currentSlide === index ? "active" : ""}`}
+    //     >
+    //       <Image src={imgUrl} alt={`Image ${index + 1}`} />
+    //     </div>
+    //   ))}
+    // </Carousel>
+    <></>
   );
 };
 
