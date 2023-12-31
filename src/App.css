@@ -56,6 +56,6 @@
   background-color: #fff;
 } */
 
-/* .ant-menu-dark .ant-menu-item-selected {
-  background-color: #ffc301;
-} */
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: transparent;
+}
