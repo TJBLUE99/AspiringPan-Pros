@@ -11,7 +11,7 @@ export const StatCard = (props: StatCardProp) => {
         border: "none",
       }}
     >
-      <Typography.Title style={{ margin: "0", color: "yellowgreen" }} level={1}>
+      <Typography.Title style={{ margin: "0", color: "#FFC301" }} level={1}>
         {props.val}
       </Typography.Title>
       <Typography.Text type="secondary" style={{ color: "#EEE" }} strong>

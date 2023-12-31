@@ -44,7 +44,7 @@ const Footer = () => {
               gap: "1rem",
             }}
           >
-            <Typography.Title level={5} style={{ color: "greenyellow" }}>
+            <Typography.Title level={5} style={{ color: "#FFC301" }}>
               Contact Us
             </Typography.Title>
           </div>
@@ -59,7 +59,7 @@ const Footer = () => {
               gap: "1rem",
             }}
           >
-            <Typography.Title level={5} style={{ color: "greenyellow" }}>
+            <Typography.Title level={5} style={{ color: "#FFC301" }}>
               Follow Us
             </Typography.Title>
             <div>
