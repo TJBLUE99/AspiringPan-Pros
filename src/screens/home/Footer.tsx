@@ -22,7 +22,7 @@ const Footer = () => {
   return (
     <div
       style={{
-        backgroundColor: "black",
+        backgroundColor: "#1F1A24",
         color: "white",
       }}
     >
