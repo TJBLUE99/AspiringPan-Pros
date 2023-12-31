@@ -1,12 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import GlobalRouter from "./GlobalRouter";
+import Layout from "./screens/layout/Layout";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <GlobalRouter />
+        <Layout />
       </BrowserRouter>
 
       {/* <Navbar />
