@@ -23,7 +23,7 @@ const Stats = () => {
     <div
       style={{
         padding: "20vh 0",
-        backgroundColor: "#EEEEEE",
+        backgroundColor: "#1F1A24",
       }}
     >
       <Row
@@ -40,7 +40,10 @@ const Stats = () => {
         style={{ width: "100vw", padding: "0 15vw" }}
         wrap
       >
-        <Typography.Title level={4} style={{ textAlign: "center" }}>
+        <Typography.Title
+          level={4}
+          style={{ textAlign: "center", color: "#EEE" }}
+        >
           {desc}
           <br />
           Let's dance together!
