@@ -13,6 +13,8 @@ import {
 import { Col, Row, Typography } from "antd";
 import React from "react";
 import Button from "../../components/Button";
+import Image from "../../components/Image";
+import Logo from "../../../public/logo2.png";
 
 const Footer = () => {
   const getYear = () => {
@@ -34,7 +36,7 @@ const Footer = () => {
         wrap
       >
         <Col xs={24} md={12} lg={10}>
-          Logo and Details
+          <Image src={Logo} className="logo" style={{ width: "100%" }} />
         </Col>
         <Col xs={24} md={12} lg={10}>
           <div

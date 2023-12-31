@@ -47,5 +47,5 @@
 
 .logo {
   font-size: 30px;
-  color: #1677ff;
+  mix-blend-mode: lighten;
 }
