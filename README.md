@@ -28,3 +28,10 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## Routing
+
+Screens (Any new page created will have a folder in screens)
+  - Each folder in screens represent a page.
+  - Each folder will contain a file with the name of the folder that will be added in Global Router.
+  - All other files in the folder will be various compound components used in that page.

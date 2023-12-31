@@ -1,13 +1,12 @@
-import React from "react";
 import Navbar from "../../components/Navbar";
-import Carousel from "../../components/Carousel";
 import FeatureCard from "../../components/FeatureCard";
-import Image from "../../components/Image";
 import vite from "/vite.svg?url";
-import { SketchOutlined } from "@ant-design/icons";
 import MenuItemProp from "../../models/MenuItemProp";
 import Stats from "./Stats";
 import Footer from "./Footer";
+import "../../components/Carousel.css";
+import Hero from "./Hero";
+import Image from "../../components/Image";
 
 const HomePage = () => {
   const menuItems: Array<MenuItemProp> = [
@@ -24,35 +23,19 @@ const HomePage = () => {
       path: "/about-us",
     },
   ];
+
   return (
     <>
       <Navbar
-        logo={<SketchOutlined className="logo" />}
+        logo={
+          <Image
+            src="logo2.png"
+            style={{ height: "70px", width: "160px", mixBlendMode: "lighten" }}
+          />
+        }
         menuItems={menuItems}
       ></Navbar>
-      <Carousel>
-        <Image
-          height={"90vh"}
-          width={"100vw"}
-          src={
-            "https://content.clipchamp.com/content-repo/content/previews/cc_i507bdbb.jpg"
-          }
-        />
-        <Image
-          height={"90vh"}
-          width={"100vw"}
-          src={
-            "https://content.clipchamp.com/content-repo/content/previews/cc_i507bdbb.jpg"
-          }
-        />
-        <Image
-          height={"90vh"}
-          width={"100vw"}
-          src={
-            "https://content.clipchamp.com/content-repo/content/previews/cc_i507bdbb.jpg"
-          }
-        />
-      </Carousel>
+      <Hero />
       <FeatureCard src={vite} caption={"undefined"}></FeatureCard>
       <Stats />
       <Footer />
