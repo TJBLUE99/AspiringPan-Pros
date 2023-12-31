@@ -4,17 +4,16 @@ import {
   InstagramFilled,
   InstagramOutlined,
   MailFilled,
-  MailOutlined,
   PhoneFilled,
-  PhoneOutlined,
   YoutubeFilled,
   YoutubeOutlined,
 } from "@ant-design/icons";
-import { Col, Row, Typography } from "antd";
+import { Col, Divider, Row, Typography } from "antd";
 import React from "react";
 import Button from "../../components/Button";
 import Image from "../../components/Image";
 import Logo from "../../../public/logo2.png";
+import QuickContact from "./QuickContact";
 
 const Footer = () => {
   const getYear = () => {
@@ -32,42 +31,23 @@ const Footer = () => {
         style={{ padding: "10vh 20vw", width: "100vw" }}
         justify={"center"}
         align={"middle"}
-        gutter={100}
         wrap
       >
-        <Col xs={24} md={12} lg={10}>
+        <Col xs={24} md={8} lg={10}>
           <Image src={Logo} className="logo" style={{ width: "100%" }} />
         </Col>
-        <Col xs={24} md={12} lg={10}>
-          <div
-            style={{
-              gap: "1rem",
-            }}
-          >
-            <Typography.Title level={5} style={{ color: "#FFC301" }}>
-              Contact Us
-            </Typography.Title>
-          </div>
-          <div>
-            <PhoneFilled /> +91 XXXXXXXXXX
-          </div>
-          <div>
-            <MailFilled /> john.doe@gmail.com
-          </div>
-          <div
-            style={{
-              gap: "1rem",
-            }}
-          >
-            <Typography.Title level={5} style={{ color: "#FFC301" }}>
-              Follow Us
-            </Typography.Title>
-            <div>
-              <Button type="link" icon={<InstagramFilled />} size="large" />
-              <Button type="link" icon={<YoutubeFilled />} size="large" />
-              <Button type="link" icon={<FacebookFilled />} size="large" />
-            </div>
-          </div>
+        <Col xs={0} md={1}>
+          <Divider
+            type="vertical"
+            style={{ borderColor: "rgba(255,255,255,0.2)", height: "30vh" }}
+          />
+        </Col>
+
+        <Col xs={0} md={8} lg={10}>
+          <QuickContact />
+        </Col>
+        <Col xs={24} md={0} style={{ textAlign: "center" }}>
+          <QuickContact />
         </Col>
       </Row>
       <Row
