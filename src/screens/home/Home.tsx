@@ -3,7 +3,8 @@ import FeatureCard from "../../components/FeatureCard";
 import vite from "/vite.svg?url";
 import MenuItemProp from "../../models/MenuItemProp";
 import "../../components/Carousel.css";
-import Hero from "../../components/Hero";
+import Hero from "./Hero";
+import Image from "../../components/Image";
 
 const HomePage = () => {
   const menuItems: Array<MenuItemProp> = [
@@ -24,7 +25,12 @@ const HomePage = () => {
   return (
     <>
       <Navbar
-        logo={<img src="logo2.png" className="logo" />}
+        logo={
+          <Image
+            src="logo2.png"
+            style={{ height: "70px", width: "160px", mixBlendMode: "lighten" }}
+          />
+        }
         menuItems={menuItems}
       ></Navbar>
       <Hero />

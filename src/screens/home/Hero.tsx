@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Carousel from "./Carousel";
-import Image from "./Image";
-import "./Carousel.css";
+import Carousel from "../../components/Carousel";
+import Image from "../../components/Image";
+import "../../components/Carousel.css";
 
 const Hero = () => {
   const imgUrls: string[] = [
