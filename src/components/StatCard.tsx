@@ -6,11 +6,13 @@ export const StatCard = (props: StatCardProp) => {
   return (
     <Card
       style={{
-        maxWidth: "max-content",
         textAlign: "center",
+        backgroundColor: "transparent",
       }}
     >
-      <h1 style={{ margin: "0" }}>{props.val}</h1>
+      <Typography.Title style={{ margin: "0" }} level={1}>
+        {props.val}
+      </Typography.Title>
       <Typography.Text type="secondary" strong>
         {props.desc}
       </Typography.Text>

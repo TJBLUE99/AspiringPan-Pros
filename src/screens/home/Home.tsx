@@ -6,6 +6,8 @@ import Image from "../../components/Image";
 import vite from "/vite.svg?url";
 import { SketchOutlined } from "@ant-design/icons";
 import MenuItemProp from "../../models/MenuItemProp";
+import Stats from "./Stats";
+import Footer from "./Footer";
 
 const HomePage = () => {
   const menuItems: Array<MenuItemProp> = [
@@ -52,6 +54,8 @@ const HomePage = () => {
         />
       </Carousel>
       <FeatureCard src={vite} caption={"undefined"}></FeatureCard>
+      <Stats />
+      <Footer />
     </>
   );
 };
