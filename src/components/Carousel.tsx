@@ -28,6 +28,7 @@ const Carousel = (props: CarouselProps) => {
         slidesToShow={1}
         slidesToScroll={1}
         autoplay
+        fade
         {...props}
       ></AntCarousel>
     </>
