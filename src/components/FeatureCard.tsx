@@ -6,11 +6,12 @@ import FeatureCardProp from "../models/FeatureCardProp";
 const FeatureCard = (props: FeatureCardProp) => {
   return (
     <Card
-      hoverable
+      // hoverable
       cover={<Image src={props.src}></Image>}
       style={{
-        backgroundColor: "black",
-        width: "250px",
+        backgroundColor: "transparent",
+        width: "200px",
+        border: "none",
       }}
     >
       <Card.Meta
@@ -22,7 +23,8 @@ const FeatureCard = (props: FeatureCardProp) => {
             style={{
               textAlign: "center",
               width: "100%",
-              color: "white",
+              // color: "white",
+              color: "black",
             }}
           >
             {props.caption}
