@@ -4,6 +4,7 @@ import MenuItemProp from "../../models/MenuItemProp";
 import Image from "../../components/Image";
 import Footer from "./Footer";
 import GlobalRouter from "../../GlobalRouter";
+import { FloatButton } from "antd";
 
 const Layout = () => {
   const menuItems: Array<MenuItemProp> = [
@@ -33,6 +34,7 @@ const Layout = () => {
       />
       <GlobalRouter />
       <Footer />
+      <FloatButton.BackTop />
     </>
   );
 };
