@@ -8,7 +8,7 @@ import ImageGrid from "./ImageGrid";
 const HomePage = () => {
   return (
     <>
-      <Hero />
+      <Hero media="video" />
       <FeatureCard src={vite} caption={"undefined"}></FeatureCard>
       <Stats />
       <ImageGrid />

@@ -3,7 +3,12 @@ import Carousel from "../../components/Carousel";
 import Image from "../../components/Image";
 import "../../components/Carousel.css";
 
-const Hero = () => {
+type HeroProp = {
+  media: string;
+};
+
+const Hero = (props: HeroProp) => {
+  console.log(props.media);
   const imgUrls: string[] = [
     "https://images.pexels.com/photos/690598/pexels-photo-690598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "https://images.pexels.com/photos/8462911/pexels-photo-8462911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -13,27 +18,41 @@ const Hero = () => {
     "https://images.pexels.com/photos/2888802/pexels-photo-2888802.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   ];
 
+  const renderer = () => {
+    switch (props.media) {
+      case "image":
+        return (
+          <Carousel afterChange={handleSlideChange}>
+            {imgUrls.map((imgUrl, index) => (
+              <div
+                key={index}
+                className={`carousel-item ${
+                  currentSlide === index ? "active" : ""
+                }`}
+              >
+                <Image src={imgUrl} alt={`Image ${index + 1}`} />
+              </div>
+            ))}
+          </Carousel>
+        );
+
+      case "video":
+        return (
+          <video width="100%" loop autoPlay muted controls={false}>
+            <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
+          </video>
+        );
+      default:
+        return <></>;
+    }
+  };
+
   const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   const handleSlideChange = (current: number) => {
     setCurrentSlide(current);
   };
-  return (
-    <>
-      <Carousel afterChange={handleSlideChange}>
-        {imgUrls.map((imgUrl, index) => (
-          <div
-            key={index}
-            className={`carousel-item ${
-              currentSlide === index ? "active" : ""
-            }`}
-          >
-            <Image src={imgUrl} alt={`Image ${index + 1}`} />
-          </div>
-        ))}
-      </Carousel>
-    </>
-  );
+  return <>{renderer()}</>;
 };
 
 export default Hero;
