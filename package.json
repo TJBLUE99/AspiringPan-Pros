@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@types/react-countup": "^4.3.1",
     "antd": "^5.12.5",
+    "rc-queue-anim": "^2.0.0",
+    "rc-scroll-anim": "^2.7.6",
     "react": "^17.0.2",
+    "react-countup": "^6.3.0",
     "react-dom": "^17.0.2",
     "react-grid-gallery": "^1.0.1-alpha.0",
     "react-image-lightbox": "^5.1.4",

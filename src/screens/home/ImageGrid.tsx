@@ -4,9 +4,13 @@ import Image from "../../components/Image";
 import { CustomImage, images } from "./Image";
 import { Gallery } from "react-grid-gallery";
 import Lightbox from "react-image-lightbox";
+import QueueAnim from "rc-queue-anim";
+import ScrollAnim from "rc-scroll-anim";
 // import "react-image-lightbox/style.css";
 
 const ImageGrid = () => {
+  const fontFamily =
+    "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'";
   const [index, setIndex] = useState(-1);
   const [modal, setModal] = useState(false);
 
@@ -27,11 +31,67 @@ const ImageGrid = () => {
   const handleMovePrev = () => setIndex(prevIndex);
   const handleMoveNext = () => setIndex(nextIndex);
 
-  const heading: string = "Gallery";
+  const heading: string = "Where Movement Takes Shape in form of Art";
+  const punchLine: string = " CAPTURING THE ESSENCE OF DANCE IN EVERY FRAME.";
 
   return (
-    <div style={{ padding: "10vw", backgroundColor: "#eee" }}>
-      <Typography.Title level={1}>{heading}</Typography.Title>
+    <div
+      style={{
+        padding: "5vw 2vw",
+        backgroundColor: "#eee",
+        // marginBottom: "5vw",
+      }}
+    >
+      <div
+        style={{
+          textAlign: "center",
+          justifyContent: "center",
+          padding: "3vw",
+        }}
+      >
+        <ScrollAnim.OverPack hideProps={{ tweenOne: { reverse: true } }}>
+          <QueueAnim type="bottom" overflow={"hidden"}>
+            <h3
+              key={"h3"}
+              style={{
+                fontFamily: fontFamily,
+              }}
+            >
+              {heading}
+            </h3>
+            <h1
+              key={"h1"}
+              style={{
+                fontFamily: fontFamily,
+              }}
+            >
+              {punchLine}
+            </h1>
+          </QueueAnim>
+        </ScrollAnim.OverPack>
+
+        {/* <Row justify={"center"} align={"middle"} style={{ width: "90vw" }}>
+          <QueueAnim type="bottom">
+            <Typography.Title
+              key={"t3"}
+              level={3}
+              style={{ textAlign: "center" }}
+            >
+              {heading}
+            </Typography.Title>
+          </QueueAnim>
+          <QueueAnim type="bottom">
+            <Typography.Title
+              key={"t1"}
+              level={1}
+              style={{ textAlign: "center" }}
+            >
+              {punchLine}
+            </Typography.Title>
+          </QueueAnim>
+        </Row> */}
+      </div>
+
       <Card>
         <Gallery
           images={images}
@@ -39,6 +99,7 @@ const ImageGrid = () => {
           enableImageSelection={false}
         />
       </Card>
+      <br />
       {modal ? (
         <div
           style={{
