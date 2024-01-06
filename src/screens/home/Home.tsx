@@ -3,14 +3,16 @@ import vite from "/vite.svg?url";
 import Stats from "./Stats";
 import "../../components/Carousel.css";
 import Hero from "./Hero";
+import ImageGrid from "./ImageGrid";
 import Features from "./Features";
 
 const HomePage = () => {
   return (
     <>
-      <Hero />
+      <Hero media="video" />
       <Features />
       <Stats />
+      <ImageGrid />
     </>
   );
 };
