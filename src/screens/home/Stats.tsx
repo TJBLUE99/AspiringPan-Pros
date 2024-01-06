@@ -4,16 +4,19 @@ import StatCardProp from "../../models/StatCardProp";
 import { StatCard } from "../../components/StatCard";
 import danceSvg from "../../assets/dance.svg";
 import Image from "../../components/Image";
+import ScrollAnim from "rc-scroll-anim";
+import QueueAnim from "rc-queue-anim";
 
 const Stats = () => {
   const stats: StatCardProp[] = [
     {
-      val: "25+",
+      val: 25,
       desc: "Years of Experience",
+      signed: true,
     },
-    { val: "3000", desc: "Students Choreographed" },
-    { val: "10+", desc: "Cities We Covered" },
-    { val: "250+", desc: "Events Completed" },
+    { val: 3000, desc: "Students Choreographed", signed: false },
+    { val: 10, desc: "Cities We Covered", signed: true },
+    { val: 250, desc: "Events Completed", signed: true },
   ];
 
   const desc: string =
@@ -32,7 +35,11 @@ const Stats = () => {
         style={{ width: "100vw", padding: "0 15vw" }}
         wrap
       >
-        <Image src={danceSvg} style={{ height: "10vh" }} />
+        <ScrollAnim.OverPack>
+          <QueueAnim type="scaleBig">
+            <Image key="IM1" src={danceSvg} style={{ height: "10vh" }} />
+          </QueueAnim>
+        </ScrollAnim.OverPack>
       </Row>
       <Row
         justify={"center"}
@@ -40,14 +47,19 @@ const Stats = () => {
         style={{ width: "100vw", padding: "0 15vw" }}
         wrap
       >
-        <Typography.Title
-          level={4}
-          style={{ textAlign: "center", color: "#EEE" }}
-        >
-          {desc}
-          <br />
-          Let's dance together!
-        </Typography.Title>
+        <ScrollAnim.OverPack>
+          <QueueAnim type="scaleBig">
+            <Typography.Title
+              key={"t1"}
+              level={4}
+              style={{ textAlign: "center", color: "#EEE" }}
+            >
+              {desc}
+              <br />
+              Let's dance together!
+            </Typography.Title>
+          </QueueAnim>
+        </ScrollAnim.OverPack>
       </Row>
       <Row
         justify={"center"}
@@ -57,7 +69,7 @@ const Stats = () => {
       >
         {stats.map((s, i) => (
           <Col key={i} xs={24} md={12} lg={6} style={{ margin: 0 }}>
-            <StatCard val={s.val} desc={s.desc} />
+            <StatCard val={s.val} desc={s.desc} signed={s.signed} />
           </Col>
         ))}
       </Row>
