@@ -16,10 +16,19 @@ const Layout = () => {
       path: "/mentors",
     },
     {
+      title: "Schedules",
+      path: "/schedules",
+    },
+    {
+      title: "Events",
+      path: "/events",
+    },
+    {
       title: "About Us",
       path: "/about-us",
     },
   ];
+
   return (
     <>
       <Navbar
