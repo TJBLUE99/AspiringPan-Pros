@@ -1,6 +1,7 @@
 type StatCardProp = {
-  val: string;
+  val: number;
   desc: string;
+  signed: boolean;
 };
 
 export default StatCardProp;
