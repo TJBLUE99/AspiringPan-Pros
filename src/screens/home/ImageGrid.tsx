@@ -1,11 +1,11 @@
-import { Card, Col, Grid, Modal, Row, Typography } from "antd";
+import { Card } from "antd";
 import React, { useState } from "react";
 import Image from "../../components/Image";
 import { CustomImage, images } from "./Image";
 import { Gallery } from "react-grid-gallery";
-import Lightbox from "react-image-lightbox";
 import QueueAnim from "rc-queue-anim";
 import ScrollAnim from "rc-scroll-anim";
+import ThumbanailImage from "../../components/ThumbnailImage";
 // import "react-image-lightbox/style.css";
 
 const ImageGrid = () => {
@@ -14,23 +14,10 @@ const ImageGrid = () => {
   const [index, setIndex] = useState(-1);
   const [modal, setModal] = useState(false);
 
-  const currentImage = images[index];
-  const nextIndex = (index + 1) % images.length;
-  const nextImage = images[nextIndex] || currentImage;
-  const prevIndex = (index + images.length - 1) % images.length;
-  const prevImage = images[prevIndex] || currentImage;
-
   const handleClick = (index: number, item: CustomImage) => {
     setIndex(index);
     setModal(true);
   };
-  const handleClose = () => {
-    setIndex(-1);
-    setModal(false);
-  };
-  const handleMovePrev = () => setIndex(prevIndex);
-  const handleMoveNext = () => setIndex(nextIndex);
-
   const heading: string = "Where Movement Takes Shape in form of Art";
   const punchLine: string = " CAPTURING THE ESSENCE OF DANCE IN EVERY FRAME.";
 
@@ -49,10 +36,10 @@ const ImageGrid = () => {
           padding: "3vw",
         }}
       >
-        <ScrollAnim.OverPack hideProps={{ tweenOne: { reverse: true } }}>
-          <QueueAnim type="bottom" overflow={"hidden"}>
+        <ScrollAnim.OverPack replay={false} playScale={"5vh"}>
+          <QueueAnim type="scaleBig" overflow={"hidden"}>
             <h3
-              key={"h3"}
+              key={"1"}
               style={{
                 fontFamily: fontFamily,
               }}
@@ -60,7 +47,7 @@ const ImageGrid = () => {
               {heading}
             </h3>
             <h1
-              key={"h1"}
+              key={"2"}
               style={{
                 fontFamily: fontFamily,
               }}
@@ -69,36 +56,19 @@ const ImageGrid = () => {
             </h1>
           </QueueAnim>
         </ScrollAnim.OverPack>
-
-        {/* <Row justify={"center"} align={"middle"} style={{ width: "90vw" }}>
-          <QueueAnim type="bottom">
-            <Typography.Title
-              key={"t3"}
-              level={3}
-              style={{ textAlign: "center" }}
-            >
-              {heading}
-            </Typography.Title>
-          </QueueAnim>
-          <QueueAnim type="bottom">
-            <Typography.Title
-              key={"t1"}
-              level={1}
-              style={{ textAlign: "center" }}
-            >
-              {punchLine}
-            </Typography.Title>
-          </QueueAnim>
-        </Row> */}
       </div>
 
-      <Card>
-        <Gallery
-          images={images}
-          onClick={handleClick}
-          enableImageSelection={false}
-        />
-      </Card>
+      <ScrollAnim.OverPack replay={false} playScale={"5vh"}>
+        <Card>
+          <Gallery
+            id={"1"}
+            images={images}
+            onClick={handleClick}
+            enableImageSelection={false}
+            thumbnailImageComponent={ThumbanailImage}
+          />
+        </Card>
+      </ScrollAnim.OverPack>
       <br />
       {modal ? (
         <div

@@ -29,25 +29,26 @@ const Stats = () => {
         backgroundColor: "#1F1A24",
       }}
     >
-      <Row
-        justify={"center"}
-        align={"middle"}
-        style={{ width: "100vw", padding: "0 15vw" }}
-        wrap
-      >
-        <ScrollAnim.OverPack>
+      <ScrollAnim.OverPack replay={false} playScale={"10vh"}>
+        <Row
+          justify={"center"}
+          align={"middle"}
+          style={{ width: "100vw", padding: "0 15vw" }}
+          wrap
+        >
+          {/* <ScrollAnim.OverPack replay playScale={"20vh"}> */}
           <QueueAnim type="scaleBig">
             <Image key="IM1" src={danceSvg} style={{ height: "10vh" }} />
           </QueueAnim>
-        </ScrollAnim.OverPack>
-      </Row>
-      <Row
-        justify={"center"}
-        align={"middle"}
-        style={{ width: "100vw", padding: "0 15vw" }}
-        wrap
-      >
-        <ScrollAnim.OverPack>
+          {/* </ScrollAnim.OverPack> */}
+        </Row>
+        <Row
+          justify={"center"}
+          align={"middle"}
+          style={{ width: "100vw", padding: "0 15vw" }}
+          wrap
+        >
+          {/* <ScrollAnim.OverPack replay playScale={"20vh"}> */}
           <QueueAnim type="scaleBig">
             <Typography.Title
               key={"t1"}
@@ -59,20 +60,21 @@ const Stats = () => {
               Let's dance together!
             </Typography.Title>
           </QueueAnim>
-        </ScrollAnim.OverPack>
-      </Row>
-      <Row
-        justify={"center"}
-        align={"middle"}
-        style={{ width: "100vw", padding: "0 10vw" }}
-        wrap
-      >
-        {stats.map((s, i) => (
-          <Col key={i} xs={24} md={12} lg={6} style={{ margin: 0 }}>
-            <StatCard val={s.val} desc={s.desc} signed={s.signed} />
-          </Col>
-        ))}
-      </Row>
+          {/* </ScrollAnim.OverPack> */}
+        </Row>
+        <Row
+          justify={"center"}
+          align={"middle"}
+          style={{ width: "100vw", padding: "0 10vw" }}
+          wrap
+        >
+          {stats.map((s, i) => (
+            <Col key={i} xs={24} md={12} lg={6} style={{ margin: 0 }}>
+              <StatCard val={s.val} desc={s.desc} signed={s.signed} />
+            </Col>
+          ))}
+        </Row>
+      </ScrollAnim.OverPack>
     </div>
   );
 };

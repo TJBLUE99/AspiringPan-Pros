@@ -22,7 +22,7 @@ const Layout = () => {
     },
   ];
   return (
-    <>
+    <div style={{ scrollBehavior: "smooth" }}>
       <Navbar
         logo={
           <Image
@@ -35,7 +35,7 @@ const Layout = () => {
       <GlobalRouter />
       <Footer />
       <FloatButton.BackTop />
-    </>
+    </div>
   );
 };
 
